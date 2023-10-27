@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000000;
+    color: #ffffff;
+    height: 500vh;
+}
+
+button {
+    background-color: transparent;
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}

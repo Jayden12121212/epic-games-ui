@@ -1,0 +1,90 @@
+/* ParallaxHero.module.scss */
+.parallaxHero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.videoBackground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.content {
+  background-color: rgba($color: #000000, $alpha: 0.5);
+  position: relative;
+  opacity: 1;
+  height: 100vh;
+  transition: opacity 0.3s, height 0.3s;
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    background-image: url("https://cdn2.unrealengine.com/main-1300x1251-f2feb1dde917.png?resize=1&w=1920");
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+.title {
+  font-size: 46px;
+  line-height: 46px;
+  font-weight: 400;
+
+  @media (min-width: 1280px) {
+    font-size: 66px;
+    line-height: 66px;
+  }
+}
+
+.text_container {
+  max-width: 850px;
+  padding-left: 40px;
+
+  @media (max-width: 768px) {
+    text-align: center;
+    padding: 0;
+  }
+}
+
+.cta {
+  border-width: 2px;
+  border-style: solid;
+  border-color: initial;
+  border-image: radial-gradient(
+      100% 185.14% at 100% 100%,
+      rgb(52, 195, 255) 0%,
+      rgb(51, 142, 238) 100%
+    )
+    5 / 2px / 0 stretch;
+  padding: 12px 24px;
+  transition: all 200ms ease-in-out;
+  margin-top: 50px;
+
+  &:hover {
+    box-shadow: rgb(0, 171, 245) 0px 0px 18px;
+    background-color: tran;
+  }
+
+  span {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-size: 13px;
+  }
+}
